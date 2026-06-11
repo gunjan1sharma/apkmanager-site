@@ -1,249 +1,95 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import "./App.css";
+
 export const PrivacyPolicy = () => (
-  <>
-    <meta charSet="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Privacy Policy</title>
-    <style
-      dangerouslySetInnerHTML={{
-        __html:
-          " body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; } ",
-      }}
-    />
-    <strong>Privacy Policy</strong>
-    <p>
-      This privacy policy applies to the App Manager - Manage Apps app (hereby
-      referred to as "Application") for mobile devices that was created by
-      Gunjan Kumar (hereby referred to as "Service Provider") as a Free service.
-      This service is intended for use "AS IS".
-    </p>
-    <br />
-    <strong>Information Collection and Use</strong>
-    <p>
-      The Application collects information when you download and use it. This
-      information may include information such as{" "}
-    </p>
-    <ul>
-      <li>Your device's Internet Protocol address (e.g. IP address)</li>
-      <li>
-        The pages of the Application that you visit, the time and date of your
-        visit, the time spent on those pages
-      </li>
-      <li>The time spent on the Application</li>
-      <li>The operating system you use on your mobile device</li>
-    </ul>
-    <p />
-    <br />
-    <p>
-      The Application does not gather precise information about the location of
-      your mobile device.
-    </p>
-    <div bis_skin_checked={1} style={{ display: "none" }}>
+  <div className="document-container">
+    <Link to="/" className="back-link">
+      &larr; Back to Home
+    </Link>
+
+    <div className="document-header">
+      <h1>Privacy Policy</h1>
+      <p className="effective-date">Effective Date: June 11, 2026</p>
+    </div>
+
+    <div className="document-content">
+      <h2>1. Introduction</h2>
       <p>
-        The Application collects your device's location, which helps the Service
-        Provider determine your approximate geographical location and make use
-        of in below ways:
+        This Privacy Policy explains how Smart App Manager ("the App") handles your data. 
+        The App is designed with privacy as a priority. Its primary functionalities—managing 
+        installed applications and monitoring app usage—operate entirely on your device. We are 
+        committed to complying with Google Play Store policies and global privacy laws by 
+        minimizing data collection and ensuring complete transparency.
+      </p>
+
+      <h2>2. Core Permissions and Local Data Processing</h2>
+      <p>
+        To provide its core features, Smart App Manager requires certain restricted Android 
+        permissions. We strictly adhere to the principle of local data processing.
+      </p>
+
+      <h3>A. QUERY_ALL_PACKAGES Permission (Broad Package Visibility)</h3>
+      <p>
+        The App's core feature is managing your installed applications, which includes functionalities 
+        like APK extraction, uninstallation, and app backup. To perform these actions, the App requires 
+        the <code>QUERY_ALL_PACKAGES</code> permission to access the list of applications installed on your device.
       </p>
       <ul>
-        <li>
-          Geolocation Services: The Service Provider utilizes location data to
-          provide features such as personalized content, relevant
-          recommendations, and location-based services.
-        </li>
-        <li>
-          Analytics and Improvements: Aggregated and anonymized location data
-          helps the Service Provider to analyze user behavior, identify trends,
-          and improve the overall performance and functionality of the
-          Application.
-        </li>
-        <li>
-          Third-Party Services: Periodically, the Service Provider may transmit
-          anonymized location data to external services. These services assist
-          them in enhancing the Application and optimizing their offerings.
-        </li>
+        <li><strong>Data Handling & Privacy:</strong> The list of installed applications is processed <strong>100% locally</strong> on your device. This data is <strong>NEVER</strong> collected, transmitted, shared, uploaded, or stored on any external servers.</li>
       </ul>
-    </div>
-    <br />
-    <p>
-      The Service Provider may use the information you provided to contact you
-      from time to time to provide you with important information, required
-      notices and marketing promotions.
-    </p>
-    <br />
-    <p>
-      For a better experience, while using the Application, the Service Provider
-      may require you to provide us with certain personally identifiable
-      information, including but not limited to gunjan.shrma@hotmail.com. The
-      information that the Service Provider request will be retained by them and
-      used as described in this privacy policy.
-    </p>
-    <br />
-    <strong>Third Party Access</strong>
-    <p>
-      Only aggregated, anonymized data is periodically transmitted to external
-      services to aid the Service Provider in improving the Application and
-      their service. The Service Provider may share your information with third
-      parties in the ways that are described in this privacy statement.
-    </p>
-    <div bis_skin_checked={1}>
-      <br />
+
+      <h3>B. PACKAGE_USAGE_STATS Permission (App Usage Data)</h3>
       <p>
-        Please note that the Application utilizes third-party services that have
-        their own Privacy Policy about handling data. Below are the links to the
-        Privacy Policy of the third-party service providers used by the
-        Application:
+        The App features a "Screen Time & Activity Dashboard" that requires Android's Usage Access 
+        (<code>PACKAGE_USAGE_STATS</code>) permission to read your foreground screen time and activity.
       </p>
       <ul>
-        <li>
-          <a
-            href="https://www.google.com/policies/privacy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            bis_skin_checked={1}
-          >
-            Google Play Services
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://support.google.com/admob/answer/6128543?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AdMob
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://firebase.google.com/support/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google Analytics for Firebase
-          </a>
-        </li>
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
-        {/**/}
+        <li><strong>Data Handling & Privacy:</strong> This app usage data is processed strictly locally to generate usage charts and insights for you within the App. This data is <strong>NEVER</strong> collected, stored remotely, monetized, or shared with any third parties.</li>
       </ul>
-    </div>
-    <br />
-    <p>
-      The Service Provider may disclose User Provided and Automatically
-      Collected Information:
-    </p>
-    <ul>
-      <li>
-        as required by law, such as to comply with a subpoena, or similar legal
-        process;
-      </li>
-      <li>
-        when they believe in good faith that disclosure is necessary to protect
-        their rights, protect your safety or the safety of others, investigate
-        fraud, or respond to a government request;
-      </li>
-      <li>
-        with their trusted services providers who work on their behalf, do not
-        have an independent use of the information we disclose to them, and have
-        agreed to adhere to the rules set forth in this privacy statement.
-      </li>
-    </ul>
-    <p />
-    <br />
-    <strong>Opt-Out Rights</strong>
-    <p>
-      You can stop all collection of information by the Application easily by
-      uninstalling it. You may use the standard uninstall processes as may be
-      available as part of your mobile device or via the mobile application
-      marketplace or network.
-    </p>
-    <br />
-    <strong>Data Retention Policy</strong>
-    <p>
-      The Service Provider will retain User Provided data for as long as you use
-      the Application and for a reasonable time thereafter. If you'd like them
-      to delete User Provided Data that you have provided via the Application,
-      please contact them at gunjan.shrma@hotmail.com and they will respond in a
-      reasonable time.
-    </p>
-    <br />
-    <strong>Children</strong>
-    <p>
-      The Service Provider does not use the Application to knowingly solicit
-      data from or market to children under the age of 13.
-    </p>
-    <div bis_skin_checked={1}>
-      <br />
+
+      <h2>3. Third-Party Services & Monetization</h2>
       <p>
-        The Application does not address anyone under the age of 13. The Service
-        Provider does not knowingly collect personally identifiable information
-        from children under 13 years of age. In the case the Service Provider
-        discover that a child under 13 has provided personal information, the
-        Service Provider will immediately delete this from their servers. If you
-        are a parent or guardian and you are aware that your child has provided
-        us with personal information, please contact the Service Provider
-        (gunjan.shrma@hotmail.com) so that they will be able to take the
-        necessary actions.
+        The App uses third-party services for monetization, specifically Google AdMob, to display advertisements.
       </p>
+      <ul>
+        <li><strong>Google AdMob:</strong> AdMob may collect and use certain information, such as the Android Advertising ID and other device identifiers, to serve personalized or non-personalized ads.</li>
+        <li>For detailed information on how Google collects, uses, and processes this data, please review the direct link to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>4. Data Retention and Deletion</h2>
+      <p>
+        We believe that you should have full control over your data. Because no personal data, 
+        package data, or usage statistics are ever transmitted to or stored on our servers, there 
+        are no remote accounts or remote data to delete.
+      </p>
+      <p>You can completely delete all associated local data at any time simply by:</p>
+      <ol style={{ marginLeft: "24px", marginBottom: "20px" }}>
+        <li style={{ marginBottom: "8px" }}>Clearing the App's data or cache within your Android device's Settings.</li>
+        <li style={{ marginBottom: "8px" }}>Uninstalling the App from your device.</li>
+      </ol>
+
+      <h2>5. Children's Privacy</h2>
+      <p>
+        These Services do not address anyone under the age of 13. We do not knowingly collect 
+        personally identifiable information from children under 13. In the case we discover that 
+        a child under 13 has provided us with personal information, we immediately delete this from 
+        our servers (though, as stated above, we do not store personal data on our servers to begin with).
+      </p>
+
+      <h2>6. Changes to This Privacy Policy</h2>
+      <p>
+        We may update our Privacy Policy from time to time to reflect changes in our practices or 
+        to comply with updated Google Play Store policies. You are advised to review this page 
+        periodically for any changes. Changes are effective immediately after they are posted on this page.
+      </p>
+
+      <h2>7. Contact Information</h2>
+      <p>
+        If you have any privacy-related questions, concerns, or requests regarding this Privacy Policy, 
+        please contact the developer directly at:
+      </p>
+      <p><strong>Email:</strong> <a href="mailto:gunjan.shrma@hotmail.com">gunjan.shrma@hotmail.com</a></p>
     </div>
-    {/**/}
-    <br />
-    <strong>Security</strong>
-    <p>
-      The Service Provider is concerned about safeguarding the confidentiality
-      of your information. The Service Provider provides physical, electronic,
-      and procedural safeguards to protect information the Service Provider
-      processes and maintains.
-    </p>
-    <br />
-    <strong>Changes</strong>
-    <p>
-      This Privacy Policy may be updated from time to time for any reason. The
-      Service Provider will notify you of any changes to the Privacy Policy by
-      updating this page with the new Privacy Policy. You are advised to consult
-      this Privacy Policy regularly for any changes, as continued use is deemed
-      approval of all changes.
-    </p>
-    <br />
-    <p>This privacy policy is effective as of 2024-11-08</p>
-    <br />
-    <strong>Your Consent</strong>
-    <p>
-      By using the Application, you are consenting to the processing of your
-      information as set forth in this Privacy Policy now and as amended by us.
-    </p>
-    <br />
-    <strong>Contact Us</strong>
-    <p>
-      If you have any questions regarding privacy while using the Application,
-      or have questions about the practices, please contact the Service Provider
-      via email at gunjan.shrma@hotmail.com.
-    </p>
-    <hr />
-  </>
+  </div>
 );

@@ -32,7 +32,7 @@ export function Footer() {
             Docbay.in
           </a>
           <a
-            href="https://play.google.com/store/apps/details?id=your-app-id"
+            href="https://play.google.com/store/apps/details?id=com.geekforce.appmanager"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"
